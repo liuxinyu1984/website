@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
 class RegisterForm(UserCreationForm):
-    email = forms.EmailField()
+    email = forms.EmailField(help_text="Email is <strong>required</strong> to reset your password.")
     #wechat_id = forms.CharField()
 
     class Meta:
